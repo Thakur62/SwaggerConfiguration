@@ -7,14 +7,24 @@ public class UserDetails {
 	@JsonProperty("id")
 	int id;
 	
-	@JsonProperty("country")
-	String countryName;
+  	@JsonProperty("name")
+    String countryName;
 	
-	@JsonProperty("name")
+	@JsonProperty("country")
 	String nameInfo;
 
 	public int getId() {
 		return id;
+	}
+
+	UserDetails(){
+		
+	}
+	public UserDetails(int id, String nameInfo, String countryName) {
+		super();
+		this.id = id;
+		this.countryName = countryName;
+		this.nameInfo = nameInfo;
 	}
 
 	public void setId(int id) {
